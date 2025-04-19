@@ -7,6 +7,7 @@ pip install -r requirements.txt
 pip install -e .
 
 Training
+
 from ultralytics import YOLO
 model = YOLO('yolov12n.yaml')
 results = model.train(
@@ -25,11 +26,13 @@ results = model("path/to/image.jpg")
 results[0].show()
 
 Prediction
+
 from ultralytics import YOLO
 model = YOLO('yolov12{n/s/m/l/x}.pt')
 model.predict()
 
 Export
+
 from ultralytics import YOLO
 model = YOLO('yolov12{n/s/m/l/x}.pt')
 model.export(format="engine", half=True)  # or format="onnx"
